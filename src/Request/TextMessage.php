@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace PotatoBot\Request;
 
+use PotatoBot\Request\Base\Message;
 use PotatoBot\Types\ChatType;
 
 /**
@@ -10,7 +11,7 @@ use PotatoBot\Types\ChatType;
  * @package PotatoBot\Request
  * @method self|string text(string $text = false);
  */
-class TextMessage extends BaseMessage
+class TextMessage extends Message
 {
     /**
      * @var string
