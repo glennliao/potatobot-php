@@ -1,5 +1,9 @@
 potato bot sdk for php
 
+# install
+``composer require glennliao/potatobot``
+
+# use
 ```php
 $token = TOKEN; // bot token
 $to = TO_USER; // user_id
