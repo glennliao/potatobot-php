@@ -8,17 +8,16 @@ use PotatoBot\Types\ChatType;
 
 
 /**
- * Class PhotoMessage
+ * Class DocumentMessage
  * @package PotatoBot\Request
- * @method self|string photo(string|resource $photo = false);
  */
-class PhotoMessage extends Message
+class DocumentMessage extends Message
 {
 
     /**
      * @var string|resource
      */
-    public $photo = '';
+    public $document = '';
 
     public $caption;
 
@@ -33,7 +32,7 @@ class PhotoMessage extends Message
     public function __construct(int $chat_id = 0, $file = '', string $caption = '', int $chat_type = ChatType::PeerUser, bool $markdown = true)
     {
         parent::__construct($chat_id, $chat_type);
-        $this->photo = $file;
+        $this->document = $file;
         $this->markdown = $markdown;
         $this->caption = $caption;
     }

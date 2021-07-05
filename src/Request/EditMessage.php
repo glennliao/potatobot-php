@@ -6,21 +6,18 @@ namespace PotatoBot\Request;
 use PotatoBot\Request\Base\Message;
 use PotatoBot\Types\ChatType;
 
-
 /**
- * Class PhotoMessage
+ * Class TextMessage
  * @package PotatoBot\Request
- * @method self|string photo(string|resource $photo = false);
+ * @method self|string text(string $text = false);
  */
-class PhotoMessage extends Message
+class EditMessage extends Message
 {
-
     /**
-     * @var string|resource
+     * @var string
      */
-    public $photo = '';
-
-    public $caption;
+    public $text = '';
+    public $message_id = '';
 
     public $reply_to_message_id;
     /**
@@ -30,12 +27,11 @@ class PhotoMessage extends Message
 
     public $reply_markup;
 
-    public function __construct(int $chat_id = 0, $file = '', string $caption = '', int $chat_type = ChatType::PeerUser, bool $markdown = true)
+    public function __construct(int $chat_id = 0,int $message_id = null, string $text = '', int $chat_type = ChatType::PeerUser, bool $markdown = true)
     {
         parent::__construct($chat_id, $chat_type);
-        $this->photo = $file;
+        $this->message_id = $message_id;
+        $this->text = $text;
         $this->markdown = $markdown;
-        $this->caption = $caption;
     }
-
 }

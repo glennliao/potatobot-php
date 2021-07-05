@@ -1,6 +1,6 @@
 {
   "name": "glennliao/potatobot",
-  "description": "bot sdk from potato chat",
+  "description": "bot sdk for potato chat",
   "type": "library",
   "authors": [
     {
@@ -17,7 +17,7 @@
     "guzzlehttp/guzzle": "^7.2"
   },
   "suggest": {
-    "guzzlehttp/guzzle": "guzzlehttp/guzzle ^7.2 版本"
+    "guzzlehttp/guzzle": "guzzlehttp/guzzle ^7.2"
   },
   "autoload": {
     "psr-4": {

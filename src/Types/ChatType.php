@@ -3,6 +3,11 @@ declare(strict_types=1);
 
 namespace PotatoBot\Types;
 
+/**
+ * Class ChatType
+ * @package PotatoBot\Types
+ * @link https://www.potato.im/api/bot#chat-type
+ */
 class ChatType
 {
     const PeerUser = 1; //user chat
